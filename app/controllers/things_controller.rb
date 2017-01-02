@@ -6,6 +6,11 @@ get '/things' do
 end
 
 #show
+get '/things/:id' do
+  @thing = Thing.find(params[:id])
+
+  erb :'/things/show'
+end
 
 #new
 
