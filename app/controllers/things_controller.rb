@@ -5,14 +5,10 @@ get '/things' do
   erb :'/things/index'
 end
 
-#show
-get '/things/:id' do
-  @thing = Thing.find(params[:id])
-
-  erb :'/things/show'
-end
-
 #new
+get '/things/new' do
+  erb :'/things/new'
+end
 
 #create
 
@@ -21,3 +17,10 @@ end
 #update
 
 #destroy
+
+#show
+get '/things/:id' do
+  @thing = Thing.find(params[:id])
+
+  erb :'/things/show'
+end
