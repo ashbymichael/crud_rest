@@ -11,6 +11,16 @@ get '/things/new' do
 end
 
 #create
+post '/things' do
+  @thing = Thing.new(params[:thing])
+
+  if @thing.save
+    redirect "/things/#{@thing.id}"
+  else
+    #TODO show user an error message
+    erb :'/things/new'
+  end
+end
 
 #edit
 
