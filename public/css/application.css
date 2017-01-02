@@ -1,0 +1,29 @@
+#content {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+label {
+  display: block;
+}
+
+.delete {
+  background: none;
+  border: none;
+  display: inline;
+  font-size: 100%;
+  text-decoration: underline;
+  margin: 0;
+  padding: 0;
+}
+  .delete:hover {
+    cursor: pointer;
+  }
+
+  .delete-form {
+    display: inline-block;
+  }

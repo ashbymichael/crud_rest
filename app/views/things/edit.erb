@@ -1,0 +1,15 @@
+<form id="new-thing-form">
+  <!-- TODO -->
+  <div class="fieldset">
+    <label for="thing_name">Name</label>
+    <input type="text" name="thing[name]" id="thing_name" value="<%= @thing.name %>" />
+  </div>
+  <div class="fieldset">
+    <label for="thing_description">Description</label>
+    <textarea name="thing[description]" id="thing_description"><%= @thing.description %>
+    </textarea>
+  </div>
+  <div class="fieldset">
+    <input type="submit" value="edit this thing" />
+  </div>
+</form>

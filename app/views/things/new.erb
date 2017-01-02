@@ -1,0 +1,14 @@
+<form action="/things" id="new-thing-form" method="POST">
+  <div class="fieldset">
+    <label for="thing_name">Name</label>
+    <input type="text" name="thing[name]" id="thing_name" />
+  </div>
+  <div class="fieldset">
+    <label for="thing_description">Description</label>
+    <textarea name="thing[description]" id="thing_description" form="new-thing-form">
+    </textarea>
+  </div>
+  <div class="fieldset">
+    <input type="submit" value="make a new thing" />
+  </div>
+</form>
