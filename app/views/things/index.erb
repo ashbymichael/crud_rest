@@ -1,6 +1,6 @@
 <h2>All the things!</h2>
 <ul>
   <% @things.each do |thing| %>
-    <li><%= thing.name %></li>
+    <li><a href="/things/<%= thing.id %>"><%= thing.name %><a></li>
   <% end %>
 </ul>
