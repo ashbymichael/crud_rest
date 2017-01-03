@@ -3,7 +3,12 @@
 <p><%= @thing.description %></p>
 
 <div>
-  <a href="/things/<%= @thing.id %>/edit">edit</a> delete
+  <a href="/things/<%= @thing.id %>/edit">edit</a>
+
+  <form class="delete-form" action="/things/<%= @thing.id %>" method="POST">
+    <input type="hidden" name="_method" value="DELETE" />
+    <input type="submit" class="delete" value="delete" />
+  </form>
 </div>
 
 <p><a href="/things">Back to the things</a>
