@@ -30,6 +30,16 @@ get '/things/:id/edit' do
 end
 
 #update
+put '/things/:id' do
+  @thing = Thing.find(params[:id])
+
+  if @thing.update_attributes(params[:thing])
+    redirect "/things/#{@thing.id}"
+  else
+    #TODO show users an error message
+    erb :'/things/edit'
+  end
+end
 
 #destroy
 
