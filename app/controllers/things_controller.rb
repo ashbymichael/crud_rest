@@ -42,6 +42,16 @@ put '/things/:id' do
 end
 
 #destroy
+delete '/things/:id' do
+  @thing = Thing.find(params[:id])
+
+  if @thing.destroy
+    redirect '/things'
+  else
+    #TODO show user an error message
+    erb :'/things/show'
+  end
+end
 
 #show
 get '/things/:id' do
