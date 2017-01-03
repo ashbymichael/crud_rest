@@ -18,11 +18,16 @@ post '/things' do
     redirect "/things/#{@thing.id}"
   else
     #TODO show user an error message
-    erb :'/things/new'
+    erb :'things/new'
   end
 end
 
 #edit
+get '/things/:id/edit' do
+  @thing = Thing.find(params[:id])
+
+  erb :'things/edit'
+end
 
 #update
 
